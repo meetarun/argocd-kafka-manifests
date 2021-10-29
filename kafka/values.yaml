@@ -658,7 +658,7 @@ externalAccess:
   autoDiscovery:
     ## @param externalAccess.autoDiscovery.enabled Enable using an init container to auto-detect external IPs/ports by querying the K8s API
     ##
-    enabled: false
+    enabled: true 
     ## Bitnami Kubectl image
     ## ref: https://hub.docker.com/r/bitnami/kubectl/tags/
     ## @param externalAccess.autoDiscovery.image.registry Init container auto-discovery image registry
@@ -743,7 +743,7 @@ externalAccess:
     ## @param externalAccess.service.domain Domain or external ip used to configure Kafka external listener when service type is NodePort
     ## If not specified, the container will try to get the kubernetes node external IP
     ##
-    domain: "localhost"
+    domain: localhost
     ## @param externalAccess.service.annotations Service annotations for external access
     ##
     annotations: {}
