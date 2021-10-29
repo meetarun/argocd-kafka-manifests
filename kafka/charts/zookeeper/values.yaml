@@ -224,7 +224,7 @@ rollingUpdatePartition: ""
 podManagementPolicy: Parallel
 ## @param replicaCount Number of ZooKeeper nodes
 ##
-replicaCount: 1
+replicaCount: 3
 
 ## @param containerPort ZooKeeper port
 ##
