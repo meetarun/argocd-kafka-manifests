@@ -622,7 +622,8 @@ service:
   ## @param service.internalPort Kafka port for inter-broker connections
   ##
   internalPort: 9093
-  ## @param service.externalPort Kafka port for external connections
+  ## @param service.
+  Port Kafka port for external connections
   ##
   externalPort: 9094
   ## @param service.nodePorts [object] Specify the nodePort value for the LoadBalancer and NodePort service types.
@@ -650,7 +651,7 @@ service:
 externalAccess:
   ## @param externalAccess.enabled Enable Kubernetes external cluster access to Kafka brokers
   ##
-  enabled: false
+  enabled: true
   ## External IPs auto-discovery configuration
   ## An init container is used to auto-detect LB IPs or node ports by querying the K8s API
   ## Note: RBAC might be required
@@ -712,7 +713,7 @@ externalAccess:
     type: LoadBalancer
     ## @param externalAccess.service.port Kafka port used for external access when service type is LoadBalancer
     ##
-    port: 9094
+    port: 19092
     ## @param externalAccess.service.loadBalancerIPs Array of load balancer IPs for each Kafka broker. Length must be the same as replicaCount
     ## Example:
     ## loadBalancerIPs:
