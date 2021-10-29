@@ -709,7 +709,7 @@ externalAccess:
   service:
     ## @param externalAccess.service.type Kubernetes Service type for external access. It can be NodePort or LoadBalancer
     ##
-    type: LoadBalancer
+    type: NodePort
     ## @param externalAccess.service.port Kafka port used for external access when service type is LoadBalancer
     ##
     port: 9092
@@ -733,7 +733,11 @@ externalAccess:
     ##   - 30001
     ##   - 30002
     ##
-    nodePorts: []
+    nodePorts: 
+      - 30001
+      - 30002
+      - 30003
+      - 30004
     ## @param externalAccess.service.useHostIPs Use service host IPs to configure Kafka external listener when service type is NodePort
     ##
     useHostIPs: false
