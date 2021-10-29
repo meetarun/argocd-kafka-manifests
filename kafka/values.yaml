@@ -850,7 +850,7 @@ rbac:
   ## binding Kafka ServiceAccount to a role
   ## that allows Kafka pods querying the K8s API
   ##
-  create: false
+  create: true
 
 ## @section Volume Permissions parameters
 
